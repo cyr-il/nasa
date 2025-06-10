@@ -1,0 +1,5 @@
+requests
+jinja2
+moviepy
+pillow
+python-dotenv

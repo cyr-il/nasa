@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA - Last 10 Images</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>NASA - Last 10 Images</h1>
+    </header>
+
+    <div class="video-controls">
+        <video class="video-player" controls>
+            <source src="nasa_video.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos HTML5.
+        </video>
+        <a href="nasa_video.mp4" download class="download-btn">📥 Télécharger la vidéo</a>
+    </div>
+
+
+    <section class="gallery">
+        {% for image in images %}
+        <div class="card">
+            <a href="{{ image.detail_link }}" alt="{{ image.alt }}">
+                <img src="{{ image.src }}" alt="{{ image.alt }}">
+            </a>
+            <h3>{{ image.title }}</h3>
+            <p class="explanation">{{ image.explanation }}</p>
+            <a href="{{ image.detail_link }}" class="read-more-btn">Voir détail</a>
+        </div>
+        {% endfor %}
+    </section>
+</body>
+</html>

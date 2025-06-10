@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA - Last 10 Images</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>{{ image.title }}</h1>
+    </header>
+
+    <div class="container">
+        <div class="image-wrapper">
+            <img src="/{{ image.src }}" alt="{{ image.alt }}">
+        </div>
+        <div class="text-wrapper">
+            <div class="explanation_detail">{{ image.explanation }}</div>
+            <a href="../nasa_gallery.html" class="back-btn">← Retour à la galerie</a>
+        </div>
+    </div>
+</body>
+</html>
